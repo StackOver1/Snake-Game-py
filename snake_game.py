@@ -13,7 +13,7 @@ screen_width = 900
 screen_height = 600
 hiscore = 0
 gameWindow = pygame.display.set_mode((screen_width, screen_height))
-bgimg1 = pygame.image.load("C:/PROGRAMMING LANGUAGES/python programming/python snake pr/bg.jpg")
+bgimg1 = pygame.image.load("bg.jpg")
 bgimg1 = pygame.transform.scale(bgimg1, (screen_width, screen_height)).convert_alpha()
 
 # Game Title
@@ -33,7 +33,7 @@ def plot_snake(gameWindow, color, snk_list, snake_size):
 def welcome():
     exit_game = False
     while not exit_game:
-        bgimg2 = pygame.image.load("C:/PROGRAMMING LANGUAGES/python programming/python snake pr/start.png")
+        bgimg2 = pygame.image.load("start.png")
         bgimg2 = pygame.transform.scale(bgimg2, (screen_width, screen_height)).convert_alpha()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -67,7 +67,7 @@ def Game_Loop():
         if game_over:
             gameWindow.fill(white)
             gameWindow.blit(bgimg1, (screen_width, screen_height))
-            bgimg3 = pygame.image.load("C:/PROGRAMMING LANGUAGES/python programming/python snake pr/over.jpg")
+            bgimg3 = pygame.image.load("over.jpg")
             bgimg3 = pygame.transform.scale(bgimg3, (screen_width, screen_height)).convert_alpha()
             gameWindow.blit(bgimg3, (0, 0))
             text_screen("Press Enter To Continue", white, 110, 330)
